@@ -1,0 +1,911 @@
+@charset "UTF-8";
+/* code base origin */
+/* 1. variables */
+/* gris base */
+/* gris plus sombre */
+/* gris plus clair */
+/* couleur bouton et coeur */
+/* 2. mixins */
+/* mixin pour centrer n'importe element*/
+/* mixin pour la presentation de l'entreprise OhMyFood! : container */
+/* mixin pour les titres de la presentation de l'entreprise : elements dans container */
+/* h1 titre de partie */
+/* --- --- --- | --- --- --- | --- --- --- */
+/* body */
+body {
+  border: 1px solid red;
+  padding: 0px;
+  margin: 0px;
+  font-family: roboto;
+  font-size: 1em;
+}
+
+/* header contient uniquement le logo */
+.header__logo {
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* barre de recherche et ses composants */
+.barre-de-recherche {
+  border-top: 2px solid #d9d9d9;
+  box-shadow: 0px 2px 10px #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e6e6e6;
+  padding: 10px;
+  margin: 0px;
+}
+.barre-de-recherche__icon {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e6e6e6;
+  padding: 10px;
+  margin: 0px;
+}
+.barre-de-recherche__input {
+  font-weight: bold;
+  opacity: 1;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e6e6e6;
+  padding: 10px;
+  margin: 0px;
+}
+
+/* Presentation de l'entreprise OhMyFood! */
+.presentation-container {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 0px;
+  background: #f3f3f3;
+}
+.presentation-container__titre {
+  font-size: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 0px;
+  background: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  margin: 0px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+.presentation-container__sous-titre {
+  font-size: 1.5em;
+  color: #5a5a5a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 0px;
+  background: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  margin: 0px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+.presentation-container__link {
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  border-radius: 30px;
+  padding: 0px;
+  margin: 0px;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  cursor: pointer;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 30px;
+  padding: 20px;
+  margin: 0px;
+  background: radial-gradient(ellipse at bottom right, #9356dc, #ff79da);
+  color: white;
+  width: auto;
+  height: auto;
+}
+
+/* Menu NAV : Fonctionnement */
+/* ajuster les elements selon taille d'ecran */
+.menu-container {
+  border: 1px dashed green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.menu-container__titre {
+  /* .menu-container__titre */
+  border: 1px dotted lightcoral;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0px 20px 10px;
+  margin: 10px;
+  width: 95%;
+  height: auto;
+}
+.menu-container__option {
+  /* .menu-container__option */
+  cursor: pointer;
+  background: #f3f3f3;
+  border: 1px dotted blue;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 20px;
+  box-shadow: 5px 5px 20px #f3f3f3;
+  width: 80%;
+  height: auto;
+  font-weight: bold;
+  /*
+  &__icon:hover{
+      color:lighten(#9356dc,10);
+  }
+  */
+}
+.menu-container__option:hover .menu-container__option__icon {
+  color: #c9abee;
+}
+.menu-container__option:hover {
+  background: #e4d5f6;
+}
+.menu-container__option__link {
+  border: 1px solid red;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0px;
+}
+.menu-container__option__numero {
+  /* .menu-container__option__numero */
+  border: 1px solid #ae80e5;
+  border-radius: 50px;
+  padding: 5px;
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  background: #ae80e5;
+  color: white;
+  /* position:absolute; */
+  /* ajuster ici lors des media query */
+  /* left: 20px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-container__option__icon {
+  /* .menu-container__option__icon */
+  border: 1px solid blue;
+  font-size: 1.5em;
+  padding: 5px;
+  margin: 5px;
+  width: 5%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+}
+.menu-container__option__action {
+  border: 1px solid orange;
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+/* element numero dans son span container */
+.container-numero {
+  border: 1px solid red;
+  width: 85%;
+  /* ajuster ici lors des media query */
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+}
+
+/* Restaurants */
+.restaurants-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: auto;
+  background: #f3f3f3;
+}
+
+.restaurants__titre {
+  border: 1px dotted lightcoral;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0px 20px 10px;
+  margin: 10px;
+  width: 95%;
+  height: auto;
+}
+
+.restaurants__link__container__figure__figcaption {
+  /* container figure et figcaption */
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  height: auto;
+  padding: 0px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid orange;
+  border-radius: 20px;
+}
+
+.restaurants__figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: none;
+  background: white;
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* modifier la taille de l'image : ici */
+.restaurants__image {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 15em;
+  object-fit: cover;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* message : Nouveau sur les images */
+.message {
+  background: #99e2d0;
+  color: #1f751f;
+  width: 70px;
+  height: auto;
+  margin: 0px;
+  padding: 5px;
+  text-align: center;
+}
+
+/* position le message : Nouveau sur les images */
+.parent {
+  position: relative;
+}
+
+.child1 {
+  position: relative;
+}
+
+.child2 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+.figcaption-restaurants {
+  /* container pour le bloc de texte et le bloc de coeur */
+  border: 1px solid blue;
+  width: 99%;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nom-lieu-restaurant {
+  /* container pour le nom et le lieu du restaurant */
+  border: 1px solid red;
+  width: 80%;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* nom du restaurant en gras */
+.nom-du-restaurant {
+  border: 1px dotted pink;
+  width: 95%;
+  height: auto;
+  padding: 10px;
+  margin: 0px;
+  font-weight: bold;
+}
+
+/* lieu du restaurant */
+.lieu-du-restautant {
+  border: 1px dotted pink;
+  width: 95%;
+  height: auto;
+  padding: 10px;
+  margin: 0px;
+}
+
+/* ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ like ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ */
+/* bloc container de coeurs */
+.like {
+  /* ici parent pour la superposition */
+  width: 15%;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* coeur-vide : child1 pour superposition */
+.coeur-vide {
+  /* child1-coeur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  font-size: 2.2em;
+}
+
+/* coeur-plein : child2 pour superposition */
+.coeur-plein {
+  /*  child1-coeur child2-coeur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  z-index: 100;
+  opacity: 0;
+  color: linear-gradient(#ff79da, #9356dc);
+}
+.coeur-plein:hover {
+  font-size: 2.4em;
+  opacity: 1;
+  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+/* FOOTER */
+/* container du footer */
+.footer-container {
+  background: #3a3a3a;
+  padding: 30px 0px 10px 10px;
+  margin: 0px;
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  flex-direction: column;
+}
+
+.svg-container {
+  font-size: 1em;
+  padding: 0px;
+  margin: 0px;
+  width: 25%;
+  height: auto;
+  background: none;
+}
+
+.liste-container {
+  background: none;
+  text-decoration: none;
+  list-style: none;
+  width: 30%;
+  height: auto;
+  padding: 10px;
+  margin: 0px;
+}
+
+.liste-element {
+  background: none;
+  padding: 10px 0px 10px 0px;
+  margin-left: 10px;
+  width: 100%;
+  height: auto;
+  border: none;
+}
+
+.icon-utensils {
+  border: none;
+  margin-right: 10px;
+}
+
+.icon-handshake {
+  border: none;
+  margin-right: 10px;
+}
+
+.rotate-handshake {
+  transform: rotate(-45deg);
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+  margin-right: 3px;
+  /* ajuster ici */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: white;
+}
+
+/* - */
+/* - */
+/* - */
+/* - */
+/* - */
+/* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---  --- */
+/* Pages : MENU */
+/* header avec bouton retour a la page d'accueil */
+.header-container {
+  border: 1px solid pink;
+  background: lightpink;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.header-container__icon {
+  font-size: 2em;
+  border: 1px solid green;
+  background: lightgreen;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: auto;
+}
+.header-container__link {
+  text-decoration: none;
+  color: black;
+}
+.header-container__arrow {
+  border: 1px solid brown;
+  background: burlywood;
+}
+.header-container__logo {
+  border: 1px solid green;
+  background: lightblue;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: auto;
+}
+.header-container__logo__image {
+  background: orange;
+}
+
+/* Section : container-main => cadre */
+.container-main {
+  border: 10px solid darkblue;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* image de fond */
+.image-de-fond {
+  width: 100%;
+  height: 20em;
+  object-fit: cover;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* menu complet => cadre menu : titre et menu */
+.menu-container-page-restaurant {
+  border: 10px solid green;
+  border-radius: 30px 30px 0px 0px;
+  background: #f3f3f3;
+  padding: 0px;
+  margin-top: -30px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* titre et coeur */
+.container-titre-et-coeur {
+  background: cyan;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 95%;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* titre-menu */
+.titre-nom {
+  font-size: 2em;
+  font-family: shrikhand;
+  border: 1px dotted orange;
+  width: 80%;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* foods */
+.liste-des-foods-container {
+  border-radius: 20px;
+  background: lightsalmon;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 95%;
+  height: auto;
+}
+
+.sous-titre {
+  /* contient le sous-titre : entrees, plats, desserts */
+  border: 3px dotted #99e2d0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  margin: 5px;
+  background: palegoldenrod;
+}
+.sous-titre__element {
+  /* obtenir l'effet soulignement */
+  width: 30px;
+  border-bottom: 3px solid #99e2d0;
+  padding-bottom: 5px;
+  margin: 5px;
+}
+
+/* disposition des foods : entrees, plats, desserts */
+.bloc-description-des-foods {
+  cursor: pointer;
+  border: 10px dashed #749910;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 5px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+.bloc-description-des-foods:hover > .container-sans-checkbox {
+  width: auto;
+}
+.bloc-description-des-foods:hover > .container-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-sans-checkbox {
+  border: 10px solid saddlebrown;
+  width: 100%;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nom-plat {
+  /* definition identique : creer @mixin structure-nom-de-plat */
+  border: 10px dashed darkblue;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+.nom-plat__element {
+  border: 10px dotted red;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: auto;
+}
+
+.bloc-avec-prix {
+  /* definition identique : creer @mixin structure-nom-de-plat  */
+  border: 10px dashed darkmagenta;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.bloc-avec-prix__ingredients-plat {
+  border: 10px dotted red;
+  padding: 0px;
+  margin: 0px;
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+.bloc-avec-prix__prix-plat {
+  border: 10px dotted red;
+  padding: 0px;
+  margin: 0px;
+  width: 15%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* checkbox */
+.container-check {
+  border: 10px solid #7aa17a;
+  padding: 0px;
+  margin: 0px;
+  font-size: 2em;
+  width: 10%;
+  height: auto;
+  background: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: #99e2d0;
+  display: none;
+}
+
+.checked {
+  border: 10px dashed #deff7a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  font-size: 2em;
+  width: auto;
+  height: auto;
+  color: white;
+  animation: rotation-checkbox 0.5s;
+}
+
+@keyframes rotation-checkbox {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* bouton commander en fin de page */
+.container-bouton-commander {
+  background: blue;
+  width: 100%;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-commander {
+  border-radius: 30px;
+}
+
+/*.commander{
+    border: 1px solid yellowgreen;
+    cursor: pointer;
+    font-size: 1.5em;
+    border:none;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 0px;
+    background: radial-gradient(ellipse at bottom right, #9356dc,#ff79da);
+    color: white;
+    width: auto;
+    height: auto;
+
+}*/
+/* --- --- --- --- --- --- --- --- ---a-n-i-m-a-t-i-o-n-----s-p-i-n-----l-o-a-d-e-r--- --- --- --- --- --- --- --- --- --- */
+/* animation spin loader */
+/* le container de spin loader */
+.section {
+  background-color: #9a9a9a;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  animation: spinloader 3s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0.8;
+}
+
+/* element parent */
+.loader {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding: 0px;
+  margin: 20px;
+}
+
+/* border */
+.loader-quart {
+  border-radius: 50px;
+  border: 10px solid rgba(255, 121, 218, 0.8);
+  animation: spin 3s linear;
+}
+
+/* pseudoelement */
+.loader-quart::after {
+  content: ".";
+  color: #df00a1;
+  font-size: 50px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  left: 10px;
+  bottom: 10px;
+  border-radius: 50px;
+}
+
+.spin-logo {
+  padding: 10px;
+  margin: 3px;
+}
+
+.spin-text {
+  font-size: 2em;
+  font-family: shrikhand;
+}
+
+/* animer le spin de rotation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* animer le spin loader a l'ecran */
+@keyframes spinloader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+/* --- --- --- --- --- --- --- --- ---a-n-i-m-a-t-i-o-n-----s-p-i-n-----l-o-a-d-e-r--- --- --- --- --- --- --- --- --- --- */
+/* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---  --- */
+/* - */
+/* - */
+/* - */
+/* - */
+/* - */
+/* faire les animations pour les boutons */
+/* 1. animation button de recherche : lighten color background et darken color */
+/* 2. animation pour le coeur : 
+sur mobile :active et mettre les coeurs en violet
+sur desktop :hover et mettre les coeurs en violet */
+/* 3. page d'accueil : loading spinner, duree 1 a 3 secondes, couvrir toute la page, design libre */
+/* 4. page menu : 
+apparition du menu avec un retard selon modele
+faire apparaitre une coche verte avec rotation et coulissant droite vers gauche : voir modele
+sur mobile avec :active
+sur desktop avec :hover */
+/* animation : bouton lors du survol */
+/* animation-bouton-rechercher-commander */
+.animation-bouton:hover {
+  border: none;
+  box-shadow: 5px 5px 10px #fface8;
+  background: radial-gradient(ellipse at bottom right, #ae80e5, #fface8);
+}
+
+/* 
+ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ
+*/
+/* listes des imports : partiels */
+
+/*# sourceMappingURL=styles.css.map */
