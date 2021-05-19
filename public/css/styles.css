@@ -1,10 +1,12 @@
-@charset "UTF-8";
 /* code base origin */
 /* 1. variables */
 /* gris base */
 /* gris plus sombre */
 /* gris plus clair */
 /* couleur bouton et coeur */
+/* --- --- --- --- --- --- --- */
+/* map pour breakpoints */
+/* media query */
 /* 2. mixins */
 /* mixin pour centrer n'importe element*/
 /* mixin pour la presentation de l'entreprise OhMyFood! : container */
@@ -382,7 +384,7 @@ body {
   margin: 0px;
 }
 
-/* ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ like ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ */
+/* --- --- --- */
 /* bloc container de coeurs */
 .like {
   /* ici parent pour la superposition */
@@ -654,8 +656,7 @@ body {
   height: auto;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  position: relative;
+  flex-wrap: nowrap;
 }
 .bloc-description-des-foods:hover > .container-sans-checkbox {
   width: auto;
@@ -666,6 +667,61 @@ body {
   align-items: center;
 }
 
+/* animation avec retard d'apparition */
+.timer-1 {
+  animation: apparition-get-up 1s;
+  animation-delay: 0.1s;
+}
+.timer-2 {
+  animation: apparition-get-up 1s;
+  animation-delay: 0.2s;
+}
+.timer-3 {
+  animation: apparition-get-up 1s;
+  animation-delay: 0.3s;
+}
+.timer-4 {
+  animation: apparition-get-up 1s;
+  animation-delay: 0.4s;
+}
+.timer-5 {
+  animation: apparition-get-up 1s;
+  animation-delay: 0.5s;
+}
+.timer-6 {
+  animation: apparition-get-up 1s;
+  animation-delay: 0.6s;
+}
+.timer-7 {
+  animation: apparition-get-up 1s;
+  animation-delay: 0.7s;
+}
+.timer-8 {
+  animation: apparition-get-up 1s;
+  animation-delay: 0.8s;
+}
+.timer-9 {
+  animation: apparition-get-up 1s;
+  animation-delay: 0.9s;
+}
+.timer-10 {
+  animation: apparition-get-up 1s;
+  animation-delay: 1s;
+}
+
+/* animation pour l'apparition des produits foods */
+@keyframes apparition-get-up {
+  0% {
+    /*transform: translate(0px, 999px);*/
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  100% {
+    /*transform: translate(0px, 0px);*/
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 .container-sans-checkbox {
   border: 10px solid saddlebrown;
   width: 100%;
@@ -676,6 +732,10 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  text-overflow: ellipsis;
+  /* pour mettre 3 points si texte trop long */
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .nom-plat {
@@ -687,6 +747,9 @@ body {
   height: auto;
   display: flex;
   justify-content: flex-start;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .nom-plat__element {
   border: 10px dotted red;
@@ -694,6 +757,9 @@ body {
   margin: 0px;
   width: 100%;
   height: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .bloc-avec-prix {
@@ -712,14 +778,15 @@ body {
   margin: 0px;
   width: 80%;
   height: auto;
-  display: flex;
-  justify-content: flex-start;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .bloc-avec-prix__prix-plat {
   border: 10px dotted red;
   padding: 0px;
   margin: 0px;
-  width: 15%;
+  width: 10%;
   height: auto;
   display: flex;
   justify-content: center;
@@ -732,18 +799,14 @@ body {
   padding: 0px;
   margin: 0px;
   font-size: 2em;
-  width: 10%;
+  width: auto;
   height: auto;
   background: white;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background: #99e2d0;
   display: none;
-  position: absolute;
-  right: 0px;
-  top: 10px;
-  bottom: 10px;
-  animation: apparition 0.5s;
+  animation: apparition 1s;
   animation-fill-mode: forwards;
 }
 
@@ -762,7 +825,7 @@ body {
   align-items: center;
   padding: 0px;
   margin: 0px;
-  font-size: 2em;
+  font-size: 1.5em;
   width: auto;
   height: auto;
   color: white;
@@ -918,8 +981,21 @@ sur desktop avec :hover */
 }
 
 /* 
-ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ
+--- --- ---
 */
+.image-no-svg {
+  border: 10px solid pink;
+}
+
+/* logo ohmyfood footer sans utiliser le svg */
+.logo-no-svg {
+  font-family: shrikhand;
+  font-size: 2em;
+  color: white;
+  border: none;
+  padding: 5px;
+}
+
 /* listes des imports : partiels */
 
 /*# sourceMappingURL=styles.css.map */

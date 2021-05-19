@@ -8,6 +8,42 @@ $color-light-grey: lighten(grey,45);
 /* couleur bouton et coeur */
 $color-btn-coeur : radial-gradient(ellipse at bottom right, #9356dc,#ff79da);
 
+/* --- --- --- --- --- --- --- */
+
+/* map pour breakpoints */
+$breakpoints : (mobile-320px:320px, mobile-425px:425px, tablette-768px:768px, desktop-1024px:1024px, large-1440px:1440px);
+/* media query */
+@mixin mobile-320px{
+    @media screen and (max-width: map-get($map: $breakpoints, $key: mobile-320px)){
+        @content;
+    }
+}
+
+@mixin mobile-425px{
+    @media screen and (max-width: map-get($map: $breakpoints, $key: mobile-425px)){
+        @content;
+    }
+}
+
+@mixin tablette-768px{
+    @media screen and (max-width: map-get($map: $breakpoints, $key: tablette-768px)){
+        @content;
+    }
+}
+
+@mixin desktop-1024px{
+    @media screen and (max-width: map-get($map: $breakpoints, $key: desktop-1024px)){
+        @content;
+    }
+}
+
+@mixin large-1440px{
+    @media screen and (max-width: map-get($map: $breakpoints, $key: large-1440px)){
+        @content;
+    }
+}
+
+
 /* 2. mixins */
 /* mixin pour centrer n'importe element*/
 @mixin centre-element{
@@ -342,7 +378,7 @@ body{
     margin: 0px;
 }
 
-/* ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ like ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ */
+/* --- --- --- */
 /* bloc container de coeurs */
 .like{ /* ici parent pour la superposition */
     width: 15%;
@@ -600,8 +636,9 @@ body{
     height: auto;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    position: relative;
+    flex-wrap: nowrap;
+    
+
     &:hover > .container-sans-checkbox {
         width: auto;
     }
@@ -609,6 +646,35 @@ body{
         @include centre-element;
     }
 }
+
+/* animation avec retard d'apparition */
+.timer{
+    @for $i from 1 through 10{
+        &-#{$i} {
+            animation: apparition-get-up 1s;
+            animation-delay: 0.1s * $i;
+        }
+    }
+}
+
+
+
+/* animation pour l'apparition des produits foods */
+@keyframes apparition-get-up{
+    0%{
+        /*transform: translate(0px, 999px);*/
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    100%{
+        /*transform: translate(0px, 0px);*/
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
 
 .container-sans-checkbox{
     border : 10px solid saddlebrown;
@@ -620,7 +686,12 @@ body{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    text-overflow: ellipsis; /* pour mettre 3 points si texte trop long */
+    white-space: nowrap;
+    overflow: hidden;
+    
 }
+
 .nom-plat{ /* definition identique : creer @mixin structure-nom-de-plat */
     border: 10px dashed darkblue;
     padding: 0px;
@@ -629,13 +700,18 @@ body{
     height: auto;
     display: flex;
     justify-content: flex-start;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
     &__element{
         border: 10px dotted red;
         padding: 0px;
         margin: 0px;
         width: 100%;
         height: auto;
-
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 }
 
@@ -653,14 +729,15 @@ body{
         margin: 0px;
         width: 80%;
         height: auto;
-        display: flex;
-        justify-content: flex-start;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
     &__prix-plat{
         border: 10px dotted red;
         padding: 0px;
         margin: 0px;
-        width: 15%;
+        width: 10%;
         height: auto;
         @include centre-element;
     }
@@ -673,18 +750,15 @@ body{
     padding: 0px;
     margin: 0px;
     font-size: 2em;
-    width : 10%;
+    width : auto;
     height: auto;
     background: white;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     background : #99e2d0;
     display: none;
-    position: absolute;
-    right: 0px;
-    top: 10px;
-    bottom: 10px;
-    animation : apparition 0.5s;
+    
+    animation : apparition 1s;
     animation-fill-mode: forwards;
 }
 
@@ -702,7 +776,7 @@ body{
     @include centre-element;
     padding: 0px;
     margin: 0px;
-    font-size: 2em;
+    font-size: 1.5em;
     width : auto;
     height: auto;
     color:white;
@@ -872,8 +946,20 @@ $color-pink-light : lighten(#ff79da, 10);
 
 
 /* 
-ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ ʕ•ᴥ•ʔ
+--- --- ---
 */
 
 
+.image-no-svg{
+    border: 10px solid pink;
+}
 
+/* logo ohmyfood footer sans utiliser le svg */
+
+.logo-no-svg{
+    font-family: shrikhand;
+    font-size: 2em;
+    color: white;
+    border:none;
+    padding: 5px;
+}
