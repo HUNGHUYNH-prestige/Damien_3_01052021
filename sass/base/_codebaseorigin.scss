@@ -87,7 +87,7 @@ $breakpoints : (mobile-320px:320px, mobile-425px:425px, tablette-768px:768px, de
 
 /* body */
 body{
-    border: 1px solid red;
+    border: none;
     padding: 0px;
     margin: 0px;
     font-family: roboto;
@@ -171,7 +171,7 @@ body{
 
 /* Menu NAV : Fonctionnement */ /* ajuster les elements selon taille d'ecran */
 .menu-container{
-    border: 1px dashed green;
+    border: none;
     @include centre-element;
     flex-direction: column;
     &__titre{ /* .menu-container__titre */
@@ -180,7 +180,7 @@ body{
     &__option{ /* .menu-container__option */
         cursor: pointer;
         background: $color-light-grey;
-        border: 1px dotted blue;
+        border: none;
         border-radius: 10px;
         @include centre-element;
         padding: 5px;
@@ -196,7 +196,7 @@ body{
             background: lighten($color: #9356dc, $amount: 30);
         }
         &__link{
-            border: 1px solid red;
+            border: none;
             width: 100%;
             height: auto;
             @include centre-element;
@@ -225,7 +225,7 @@ body{
             @include centre-element;
         }
         &__icon{ /* .menu-container__option__icon */
-            border: 1px solid blue;
+            border: none;
             font-size: 1.5em;
             padding: 5px;
             margin: 5px;
@@ -240,7 +240,7 @@ body{
         }
         */
         &__action{
-            border: 1px solid orange;
+            border: none;
             width: 85%;
             height: auto;
             @include centre-element;
@@ -251,7 +251,7 @@ body{
 
 /* element numero dans son span container */
 .container-numero{
-    border: 1px solid red;
+    border: none;
     width: 85%; /* ajuster ici lors des media query */
     height: auto;
     display: flex;
@@ -304,7 +304,7 @@ body{
     margin: 20px;
     @include centre-element;
     flex-direction: column;
-    border: 1px solid orange;
+    border: none;
     border-radius: 20px;
     @include desktop-1024px{
         width: 45%;
@@ -362,7 +362,7 @@ body{
 }
 
 .figcaption-restaurants{ /* container pour le bloc de texte et le bloc de coeur */
-    border: 1px solid blue;
+    border: none;
     width: 99%;
     height: auto;
     padding: 0px;
@@ -373,7 +373,7 @@ body{
 }
 
 .nom-lieu-restaurant{ /* container pour le nom et le lieu du restaurant */
-    border: 1px solid red;
+    border: none;
     width: 80%;
     height: auto;
     padding: 0px;
@@ -382,7 +382,7 @@ body{
 
 /* nom du restaurant en gras */
 .nom-du-restaurant{
-    border: 1px dotted pink;
+    border: none;
     width: 95%;
     height: auto;
     padding: 10px;
@@ -392,7 +392,7 @@ body{
 
 /* lieu du restaurant */
 .lieu-du-restautant{
-    border: 1px dotted pink;
+    border: none;
     width: 95%;
     height: auto;
     padding: 10px;
@@ -518,16 +518,16 @@ body{
 
 /* header avec bouton retour a la page d'accueil */
 .header-container{
-    border: 1px solid pink;
-    background: lightpink;
+    border: none;
+    background: none;
     padding: 0px;
     margin: 0px;
     display: flex;
     justify-content: space-evenly;
     &__icon{
         font-size: 2em;
-        border: 1px solid green;
-        background: lightgreen;
+        border: none;
+        background: none;
         padding: 10px;
         margin: 10px;
         @include centre-element;
@@ -539,46 +539,60 @@ body{
         color: black;
     }
     &__arrow{
-        border: 1px solid brown;
-        background: burlywood;
+        border: none;
+        background: none;
     }
     &__logo{
-        border: 1px solid green;
-        background: lightblue;
+        border: none;
+        background: none;
         padding: 10px;
         margin: 10px;
         @include centre-element;
         width: 90%;
         height: auto;
         &__image{
-            background: orange;
+            background: none;
         }
     }
 }
 
 /* Section : container-main => cadre */
 .container-main{
-    border: 10px solid darkblue;
+    border: none;
     padding: 0px;
     margin: 0px;
+    /*
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    */
+}
+.container--image--de--fond{
+    @include centre-element;
+    width: 90%;
+    height: auto;
+    border: none;
+    margin: auto;
+    padding: 0px;
+    background:none;
 }
 
 /* image de fond */
 .image-de-fond{
+    @include centre-element;
     width: 100%;
     height: 20em;
     object-fit: cover;
     padding: 0px;
     margin: 0px;
+    position: relative;
+    z-index: -111;
 }
 
 /* menu complet => cadre menu : titre et menu */
 .menu-container-page-restaurant{
-    border: 10px solid green;
+    border: 10px solid orange;
     border-radius: 30px 30px 0px 0px;
     background: $color-light-grey;
     padding: 0px;
@@ -587,11 +601,12 @@ body{
     height: auto;
     @include centre-element;
     flex-direction: column;
+    z-index: 99;
 }
 
 /* titre et coeur */
 .container-titre-et-coeur{
-    background: cyan;
+    background: none;
     border-radius: 20px;
     display: flex;
     justify-content: space-evenly;
@@ -606,7 +621,7 @@ body{
 .titre-nom{
     font-size: 2em;
     font-family: shrikhand;
-    border: 1px dotted orange;
+    border: none;
     width: 80%;
     height: auto;
     padding: 0px;
@@ -622,7 +637,7 @@ body{
 /* foods */
 .liste-des-foods-container{
     border-radius: 20px;
-    background : lightsalmon;
+    background : none;
     padding: 0px;
     margin: 0px;
     @include centre-element;
@@ -632,7 +647,7 @@ body{
 }
 
 .sous-titre{ /* contient le sous-titre : entrees, plats, desserts */
-    border : 3px dotted #99e2d0;
+    border : none;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -640,7 +655,7 @@ body{
     height: auto;
     padding: 5px;
     margin: 5px;
-    background: palegoldenrod;
+    background: none;
     &__element{ /* obtenir l'effet soulignement */
         width: 30px;
         border-bottom: 3px solid #99e2d0;
@@ -652,7 +667,7 @@ body{
 /* disposition des foods : entrees, plats, desserts */
 .bloc-description-des-foods{
     cursor: pointer;
-    border: 10px dashed rgb(116, 153, 16);
+    border: none;
     border-radius: 20px;
     padding: 5px;
     margin: 5px;
@@ -661,6 +676,7 @@ body{
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
+    box-shadow: 0 5px 15px 0 #c3c3c3;
     @include desktop-1024px{
         width: 45%;
     }
@@ -704,7 +720,7 @@ body{
 
 
 .container-sans-checkbox{
-    border : 10px solid saddlebrown;
+    border : none;
     width : 100%;
     height: auto;
     padding: 0px;
@@ -720,7 +736,7 @@ body{
 }
 
 .nom-plat{ /* definition identique : creer @mixin structure-nom-de-plat */
-    border: 10px dashed darkblue;
+    border: none;
     padding: 0px;
     margin: 0px;
     width: 100%;
@@ -731,7 +747,7 @@ body{
     white-space: nowrap;
     overflow: hidden;
     &__element{
-        border: 10px dotted red;
+        border: none;
         padding: 0px;
         margin: 0px;
         width: 100%;
@@ -743,7 +759,7 @@ body{
 }
 
 .bloc-avec-prix{ /* definition identique : creer @mixin structure-nom-de-plat  */
-    border: 10px dashed darkmagenta;
+    border: none;
     padding: 0px;
     margin: 0px;
     width: 100%;
@@ -751,7 +767,7 @@ body{
     display: flex;
     justify-content: space-between;
     &__ingredients-plat{
-        border: 10px dotted red;
+        border: none;
         padding: 0px;
         margin: 0px;
         width: 80%;
@@ -761,7 +777,7 @@ body{
         overflow: hidden;
     }
     &__prix-plat{
-        border: 10px dotted red;
+        border: none;
         padding: 0px;
         margin: 0px;
         width: 10%;
