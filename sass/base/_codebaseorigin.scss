@@ -73,7 +73,7 @@ $breakpoints : (mobile-320px:320px, mobile-425px:425px, tablette-768px:768px, de
 
 /* h1 titre de partie */
 @mixin h1-titre-de-partie{
-    border: 1px dotted lightcoral;
+    border: none;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -261,7 +261,7 @@ body{
     margin: 0px;
     position: absolute;
     @include mobile-320px{
-        width: 95%;
+        width: 97%;
     }
     @include mobile-425px{
         width: 92%;
@@ -444,7 +444,7 @@ body{
 /* container du footer */
 .footer-container{
     background: rgb(58, 58, 58);
-    padding: 30px 0px 10px 10px;
+    padding: 10px 0px 10px 10px;
     margin: 0px;
     display: flex;
     justify-content: flex-start;
@@ -466,7 +466,7 @@ body{
     background: none;
     text-decoration: none;
     list-style: none;
-    width: 30%;
+    width: 80%;
     height: auto;
     padding: 10px;
     margin: 0px;
@@ -768,6 +768,7 @@ body{
     height: auto;
     display: flex;
     justify-content: space-between;
+   
     &__ingredients-plat{
         border: none;
         padding: 0px;
@@ -777,6 +778,7 @@ body{
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
+        font-weight: lighter;
     }
     &__prix-plat{
         border: none;
@@ -843,11 +845,12 @@ body{
 /* bouton commander en fin de page */
 
 .container-bouton-commander{
-    background: none;
+    background: $color-light-grey;
     width: 100%;
     height: auto;
-    padding: 0px;
     margin: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     @include centre-element;
 }
 

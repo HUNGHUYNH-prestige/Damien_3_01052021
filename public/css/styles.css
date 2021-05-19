@@ -148,7 +148,7 @@ body {
 }
 .menu-container__titre {
   /* .menu-container__titre */
-  border: 1px dotted lightcoral;
+  border: none;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -256,7 +256,7 @@ body {
 }
 @media screen and (min-width: 320px) {
   .container-numero {
-    width: 95%;
+    width: 97%;
   }
 }
 @media screen and (min-width: 425px) {
@@ -294,7 +294,7 @@ body {
 }
 
 .restaurants__titre {
-  border: 1px dotted lightcoral;
+  border: none;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -470,7 +470,7 @@ body {
 /* container du footer */
 .footer-container {
   background: #3a3a3a;
-  padding: 30px 0px 10px 10px;
+  padding: 10px 0px 10px 10px;
   margin: 0px;
   display: flex;
   justify-content: flex-start;
@@ -491,7 +491,7 @@ body {
   background: none;
   text-decoration: none;
   list-style: none;
-  width: 30%;
+  width: 80%;
   height: auto;
   padding: 10px;
   margin: 0px;
@@ -849,6 +849,7 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  font-weight: lighter;
 }
 .bloc-avec-prix__prix-plat {
   border: none;
@@ -913,11 +914,12 @@ body {
 }
 /* bouton commander en fin de page */
 .container-bouton-commander {
-  background: none;
+  background: #f3f3f3;
   width: 100%;
   height: auto;
-  padding: 0px;
   margin: 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
