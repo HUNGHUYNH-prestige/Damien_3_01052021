@@ -14,31 +14,31 @@ $color-btn-coeur : radial-gradient(ellipse at bottom right, #9356dc,#ff79da);
 $breakpoints : (mobile-320px:320px, mobile-425px:425px, tablette-768px:768px, desktop-1024px:1024px, large-1440px:1440px);
 /* media query */
 @mixin mobile-320px{
-    @media screen and (max-width: map-get($map: $breakpoints, $key: mobile-320px)){
+    @media screen and (min-width: map-get($map: $breakpoints, $key: mobile-320px)){
         @content;
     }
 }
 
 @mixin mobile-425px{
-    @media screen and (max-width: map-get($map: $breakpoints, $key: mobile-425px)){
+    @media screen and (min-width: map-get($map: $breakpoints, $key: mobile-425px)){
         @content;
     }
 }
 
 @mixin tablette-768px{
-    @media screen and (max-width: map-get($map: $breakpoints, $key: tablette-768px)){
+    @media screen and (min-width: map-get($map: $breakpoints, $key: tablette-768px)){
         @content;
     }
 }
 
 @mixin desktop-1024px{
-    @media screen and (max-width: map-get($map: $breakpoints, $key: desktop-1024px)){
+    @media screen and (min-width: map-get($map: $breakpoints, $key: desktop-1024px)){
         @content;
     }
 }
 
 @mixin large-1440px{
-    @media screen and (max-width: map-get($map: $breakpoints, $key: large-1440px)){
+    @media screen and (min-width: map-get($map: $breakpoints, $key: large-1440px)){
         @content;
     }
 }
@@ -203,6 +203,9 @@ body{
             text-decoration: none;
             padding: 10px;
             margin: 0px;
+            @include desktop-1024px{
+                justify-content: space-evenly;
+            }
         }
         &__numero{ /* .menu-container__option__numero */
             border : 1px solid lighten(#9356dc,10);
@@ -238,7 +241,7 @@ body{
         */
         &__action{
             border: 1px solid orange;
-            width: 50%;
+            width: 85%;
             height: auto;
             @include centre-element;
             color: black;
@@ -257,6 +260,21 @@ body{
     padding: 0px;
     margin: 0px;
     position: absolute;
+    @include mobile-320px{
+        width: 95%;
+    }
+    @include mobile-425px{
+        width: 92%;
+    }
+    @include tablette-768px{
+        width: 86%;
+    }
+    @include desktop-1024px{
+        width: 85%;
+    }
+    @include large-1440px{
+        width: 84%;
+    }
 
 
 
@@ -288,6 +306,9 @@ body{
     flex-direction: column;
     border: 1px solid orange;
     border-radius: 20px;
+    @include desktop-1024px{
+        width: 45%;
+    }
 }
 
 .restaurants__figure{
@@ -593,6 +614,9 @@ body{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    @include mobile-320px{
+        font-size: 1.4em;
+    }
 }
 
 /* foods */
