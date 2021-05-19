@@ -694,7 +694,7 @@ body{
 .timer{
     @for $i from 1 through 10{
         &-#{$i} {
-            animation: apparition-get-up 1s;
+            animation: apparition-get-up 3s;
             animation-delay: 0.1s * $i;
         }
     }

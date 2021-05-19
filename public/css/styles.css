@@ -735,43 +735,43 @@ body {
 
 /* animation avec retard d'apparition */
 .timer-1 {
-  animation: apparition-get-up 1s;
+  animation: apparition-get-up 3s;
   animation-delay: 0.1s;
 }
 .timer-2 {
-  animation: apparition-get-up 1s;
+  animation: apparition-get-up 3s;
   animation-delay: 0.2s;
 }
 .timer-3 {
-  animation: apparition-get-up 1s;
+  animation: apparition-get-up 3s;
   animation-delay: 0.3s;
 }
 .timer-4 {
-  animation: apparition-get-up 1s;
+  animation: apparition-get-up 3s;
   animation-delay: 0.4s;
 }
 .timer-5 {
-  animation: apparition-get-up 1s;
+  animation: apparition-get-up 3s;
   animation-delay: 0.5s;
 }
 .timer-6 {
-  animation: apparition-get-up 1s;
+  animation: apparition-get-up 3s;
   animation-delay: 0.6s;
 }
 .timer-7 {
-  animation: apparition-get-up 1s;
+  animation: apparition-get-up 3s;
   animation-delay: 0.7s;
 }
 .timer-8 {
-  animation: apparition-get-up 1s;
+  animation: apparition-get-up 3s;
   animation-delay: 0.8s;
 }
 .timer-9 {
-  animation: apparition-get-up 1s;
+  animation: apparition-get-up 3s;
   animation-delay: 0.9s;
 }
 .timer-10 {
-  animation: apparition-get-up 1s;
+  animation: apparition-get-up 3s;
   animation-delay: 1s;
 }
 
