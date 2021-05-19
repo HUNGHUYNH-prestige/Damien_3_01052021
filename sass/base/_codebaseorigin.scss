@@ -661,6 +661,9 @@ body{
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
+    @include desktop-1024px{
+        width: 45%;
+    }
     
 
     &:hover > .container-sans-checkbox {

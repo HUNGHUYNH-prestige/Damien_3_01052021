@@ -698,6 +698,11 @@ body {
   justify-content: space-between;
   flex-wrap: nowrap;
 }
+@media screen and (min-width: 1024px) {
+  .bloc-description-des-foods {
+    width: 45%;
+  }
+}
 .bloc-description-des-foods:hover > .container-sans-checkbox {
   width: auto;
 }
