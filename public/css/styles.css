@@ -648,7 +648,7 @@ body {
   align-items: center;
   width: 95%;
   height: auto;
-  padding: 0px;
+  padding: 15px;
   margin: 0px;
 }
 
@@ -807,7 +807,7 @@ body {
 .nom-plat {
   /* definition identique : creer @mixin structure-nom-de-plat */
   border: none;
-  padding: 0px;
+  padding: 5px;
   margin: 0px;
   width: 100%;
   height: auto;
@@ -816,6 +816,8 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  font-weight: bold;
+  font-size: 1.1em;
 }
 .nom-plat__element {
   border: none;
@@ -831,7 +833,7 @@ body {
 .bloc-avec-prix {
   /* definition identique : creer @mixin structure-nom-de-plat  */
   border: none;
-  padding: 0px;
+  padding: 5px;
   margin: 0px;
   width: 100%;
   height: auto;
@@ -864,7 +866,7 @@ body {
   border: none;
   padding: 0px;
   margin: 0px;
-  font-size: 2em;
+  font-size: 1.1em;
   width: auto;
   height: auto;
   background: white;
