@@ -408,6 +408,7 @@ body{
     margin: 0px;
     @include centre-element;
     position : relative;
+    border: none;
 }
 
 /* coeur-vide : child1 pour superposition */
@@ -415,8 +416,18 @@ body{
     @include centre-element;
     padding: 0px;
     margin: 0px;
-    position : absolute;
+    position : relative;
     font-size: 2.2em;
+    cursor: pointer;
+    &:hover + .coeur-plein{
+        font-size: 2.4em;
+        opacity: 1;
+        background: linear-gradient(#ff79da, #9356dc);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        animation-name: love-like;
+        animation-duration: 0.5s; 
+    }
 }
 
 /* coeur-plein : child2 pour superposition */
@@ -427,6 +438,7 @@ body{
     position : absolute;
     z-index : 100;
     opacity : 0;
+    cursor: pointer;
     color: linear-gradient(#ff79da,#9356dc);
     &:hover{
         font-size: 2.4em;
@@ -434,9 +446,29 @@ body{
         background: linear-gradient(#ff79da, #9356dc);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
+        animation-name: love-like;
+        animation-duration: 0.5s;               
     }
 }
 
+/* animation remplissage du coeur */
+@keyframes love-like{
+    0%{
+        transform: scale(0.1);
+    }
+    25%{
+        transform: scale(0.2);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+    75%{
+        transform: scale(0.7);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
 
 
 /* FOOTER */
@@ -448,7 +480,6 @@ body{
     margin: 0px;
     display: flex;
     justify-content: flex-start;
-    
     color: white; 
     flex-direction: column;  
 }
