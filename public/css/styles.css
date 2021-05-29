@@ -633,7 +633,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
   height: auto;
   border: none;
   margin: auto;
@@ -757,7 +757,7 @@ body {
   }
 }
 .bloc-description-des-foods:hover > .container-sans-checkbox {
-  width: 90%;
+  width: 85%;
   /* conserver une taille fixe pour le texte */
 }
 .bloc-description-des-foods:hover > .container-check {
@@ -849,7 +849,7 @@ body {
 
 .nom-plat {
   /* definition identique : creer @mixin structure-nom-de-plat */
-  border: 1px solid pink;
+  border: none;
   padding: 5px;
   margin: 0px;
   width: 100%;
@@ -875,7 +875,7 @@ body {
 
 .bloc-avec-prix {
   /* definition identique : creer @mixin structure-nom-de-plat  */
-  border: 1px solid green;
+  border: none;
   padding: 5px;
   margin: 0px;
   width: 100%;
@@ -911,9 +911,6 @@ body {
   padding: 0px;
   margin: 0px;
   font-size: 1.1em;
-  width: 100%;
-  height: auto;
-  background: white;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background: #99e2d0;
@@ -928,7 +925,7 @@ body {
     width: 0;
   }
   100% {
-    width: 10%;
+    width: 15%;
   }
 }
 .checked {
@@ -939,8 +936,6 @@ body {
   padding: 0px;
   margin: 0px;
   font-size: 1.5em;
-  width: auto;
-  height: auto;
   color: white;
   animation: rotation-checkbox 0.5s;
 }
