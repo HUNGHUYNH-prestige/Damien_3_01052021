@@ -742,7 +742,7 @@ body {
   cursor: pointer;
   border: none;
   border-radius: 20px;
-  padding: 5px;
+  padding: 0px;
   margin: 5px;
   width: 100%;
   height: auto;
@@ -757,7 +757,8 @@ body {
   }
 }
 .bloc-description-des-foods:hover > .container-sans-checkbox {
-  width: auto;
+  width: 90%;
+  /* conserver une taille fixe pour le texte */
 }
 .bloc-description-des-foods:hover > .container-check {
   display: flex;
@@ -848,7 +849,7 @@ body {
 
 .nom-plat {
   /* definition identique : creer @mixin structure-nom-de-plat */
-  border: none;
+  border: 1px solid green;
   padding: 5px;
   margin: 0px;
   width: 100%;
@@ -874,7 +875,7 @@ body {
 
 .bloc-avec-prix {
   /* definition identique : creer @mixin structure-nom-de-plat  */
-  border: none;
+  border: 1px solid green;
   padding: 5px;
   margin: 0px;
   width: 100%;
@@ -910,13 +911,14 @@ body {
   padding: 0px;
   margin: 0px;
   font-size: 1.1em;
-  width: auto;
+  width: 100%;
   height: auto;
   background: white;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background: #99e2d0;
   display: none;
+  /*@include centre-element;*/
   animation: apparition 1s;
   animation-fill-mode: forwards;
 }
@@ -945,10 +947,10 @@ body {
 
 @keyframes rotation-checkbox {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(90deg);
   }
-  25% {
-    transform: rotate(-90deg);
+  50% {
+    transform: rotate(300deg);
   }
   100% {
     transform: rotate(0deg);
