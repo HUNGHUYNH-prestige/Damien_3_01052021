@@ -715,7 +715,8 @@ body{
 
     &:hover > .container-sans-checkbox {
 
-        width: 85%; /* conserver une taille fixe pour le texte */
+        /* conserver une taille fixe pour le texte */
+        width: 85%;
 
     }
     &:hover > .container-check{

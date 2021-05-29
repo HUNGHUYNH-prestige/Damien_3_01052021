@@ -757,8 +757,8 @@ body {
   }
 }
 .bloc-description-des-foods:hover > .container-sans-checkbox {
-  width: 85%;
   /* conserver une taille fixe pour le texte */
+  width: 85%;
 }
 .bloc-description-des-foods:hover > .container-check {
   display: flex;
