@@ -712,12 +712,9 @@ body{
         width: 45%;
     }
     
-
     &:hover > .container-sans-checkbox {
-
         /* conserver une taille fixe pour le texte */
         width: 85%;
-
     }
     &:hover > .container-check{
         @include centre-element;
@@ -729,6 +726,7 @@ body{
 .timer{
     @for $i from 1 through 10{
         &-#{$i} {
+            opacity: 0;
             animation: apparition-get-up 3s;
             animation-delay: 0.1s * $i;
             animation-fill-mode: forwards;
