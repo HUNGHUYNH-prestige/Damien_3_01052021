@@ -769,42 +769,52 @@ body {
 .timer-1 {
   animation: apparition-get-up 3s;
   animation-delay: 0.1s;
+  animation-fill-mode: forwards;
 }
 .timer-2 {
   animation: apparition-get-up 3s;
   animation-delay: 0.2s;
+  animation-fill-mode: forwards;
 }
 .timer-3 {
   animation: apparition-get-up 3s;
   animation-delay: 0.3s;
+  animation-fill-mode: forwards;
 }
 .timer-4 {
   animation: apparition-get-up 3s;
   animation-delay: 0.4s;
+  animation-fill-mode: forwards;
 }
 .timer-5 {
   animation: apparition-get-up 3s;
   animation-delay: 0.5s;
+  animation-fill-mode: forwards;
 }
 .timer-6 {
   animation: apparition-get-up 3s;
   animation-delay: 0.6s;
+  animation-fill-mode: forwards;
 }
 .timer-7 {
   animation: apparition-get-up 3s;
   animation-delay: 0.7s;
+  animation-fill-mode: forwards;
 }
 .timer-8 {
   animation: apparition-get-up 3s;
   animation-delay: 0.8s;
+  animation-fill-mode: forwards;
 }
 .timer-9 {
   animation: apparition-get-up 3s;
   animation-delay: 0.9s;
+  animation-fill-mode: forwards;
 }
 .timer-10 {
   animation: apparition-get-up 3s;
   animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 
 /* animation pour l'apparition des produits foods */

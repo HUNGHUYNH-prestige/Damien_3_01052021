@@ -727,6 +727,7 @@ body{
         &-#{$i} {
             animation: apparition-get-up 3s;
             animation-delay: 0.1s * $i;
+            animation-fill-mode: forwards;
         }
     }
 }
