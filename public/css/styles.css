@@ -757,13 +757,18 @@ body {
   }
 }
 .bloc-description-des-foods:hover > .container-sans-checkbox {
+<<<<<<< HEAD
   width: 85%;
+=======
+  width: 70%;
+>>>>>>> dc6c79ba4cd78995fe735f1b1f23d411f30f598a
   /* conserver une taille fixe pour le texte */
 }
 .bloc-description-des-foods:hover > .container-check {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 10%;
 }
 
 /* animation avec retard d'apparition */
@@ -849,7 +854,11 @@ body {
 
 .nom-plat {
   /* definition identique : creer @mixin structure-nom-de-plat */
+<<<<<<< HEAD
   border: none;
+=======
+  border: 1px solid orange;
+>>>>>>> dc6c79ba4cd78995fe735f1b1f23d411f30f598a
   padding: 5px;
   margin: 0px;
   width: 100%;
@@ -875,7 +884,11 @@ body {
 
 .bloc-avec-prix {
   /* definition identique : creer @mixin structure-nom-de-plat  */
+<<<<<<< HEAD
   border: none;
+=======
+  border: 1px solid blue;
+>>>>>>> dc6c79ba4cd78995fe735f1b1f23d411f30f598a
   padding: 5px;
   margin: 0px;
   width: 100%;

@@ -714,10 +714,15 @@ body{
     
 
     &:hover > .container-sans-checkbox {
+<<<<<<< HEAD
         width: 85%; /* conserver une taille fixe pour le texte */
+=======
+        width: 70%; /* conserver une taille fixe pour le texte */
+>>>>>>> dc6c79ba4cd78995fe735f1b1f23d411f30f598a
     }
     &:hover > .container-check{
         @include centre-element;
+        width: 10%;
     }
 }
 
@@ -768,7 +773,11 @@ body{
 }
 
 .nom-plat{ /* definition identique : creer @mixin structure-nom-de-plat */
+<<<<<<< HEAD
     border: none;
+=======
+    border: 1px solid orange;
+>>>>>>> dc6c79ba4cd78995fe735f1b1f23d411f30f598a
     padding: 5px;
     margin: 0px;
     width: 100%;
@@ -793,7 +802,11 @@ body{
 }
 
 .bloc-avec-prix{ /* definition identique : creer @mixin structure-nom-de-plat  */
+<<<<<<< HEAD
     border: none;
+=======
+    border: 1px solid blue;
+>>>>>>> dc6c79ba4cd78995fe735f1b1f23d411f30f598a
     padding: 5px;
     margin: 0px;
     width: 100%;
