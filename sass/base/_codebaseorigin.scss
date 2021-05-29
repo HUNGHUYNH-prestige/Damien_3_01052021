@@ -714,10 +714,11 @@ body{
     
 
     &:hover > .container-sans-checkbox {
-        width: 90%; /* conserver une taille fixe pour le texte */
+        width: 70%; /* conserver une taille fixe pour le texte */
     }
     &:hover > .container-check{
         @include centre-element;
+        width: 10%;
     }
 }
 
@@ -768,7 +769,7 @@ body{
 }
 
 .nom-plat{ /* definition identique : creer @mixin structure-nom-de-plat */
-    border: 1px solid pink;
+    border: 1px solid orange;
     padding: 5px;
     margin: 0px;
     width: 100%;
@@ -793,7 +794,7 @@ body{
 }
 
 .bloc-avec-prix{ /* definition identique : creer @mixin structure-nom-de-plat  */
-    border: 1px solid green;
+    border: 1px solid blue;
     padding: 5px;
     margin: 0px;
     width: 100%;
