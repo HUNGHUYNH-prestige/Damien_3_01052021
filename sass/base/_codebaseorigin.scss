@@ -772,8 +772,9 @@ body{
 .nom-plat{ /* definition identique : creer @mixin structure-nom-de-plat */
 
     border: none;
-
     padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin: 0px;
     width: 100%;
     height: auto;
@@ -799,8 +800,9 @@ body{
 .bloc-avec-prix{ /* definition identique : creer @mixin structure-nom-de-plat  */
 
     border: none;
-
-    padding: 5px;
+    padding : 5px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin: 0px;
     width: 100%;
     height: auto;
