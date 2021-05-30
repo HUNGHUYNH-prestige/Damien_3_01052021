@@ -190,7 +190,7 @@
     padding-left: 15px;
     padding-right: 15px;
     margin: 0px;
-    width: 100%;
+    width: 90%;
     height: auto;
     display: flex;
     justify-content: flex-start;
@@ -211,7 +211,7 @@
     }
 }
 
-.bloc-avec-prix{ /* definition identique : creer @mixin structure-nom-de-plat  */
+.bloc-avec-prix{
 
     border: none;
     padding : 5px;
@@ -221,7 +221,7 @@
     width: 90%;
     height: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
    
     &__ingredients-plat{
         border: none;
@@ -236,7 +236,7 @@
     }
     &__prix-plat{
         border: none;
-        padding: 0px;
+        padding-left: 20px;
         margin: 0px;
         width: auto;
         height: auto;
