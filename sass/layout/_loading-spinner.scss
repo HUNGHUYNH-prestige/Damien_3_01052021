@@ -1,0 +1,82 @@
+/* Uniquement le LOADING SPINNER */
+
+/* --- --- --- --- --- --- --- --- ---a-n-i-m-a-t-i-o-n-----s-p-i-n-----l-o-a-d-e-r--- --- --- --- --- --- --- --- --- --- */
+/* animation spin loader */
+/* le container de spin loader */
+.section{
+    background-color: lighten($color: grey, $amount: 10);
+    width: 100%;
+    height: 100%;
+    @include centre-element;
+    padding: 0px;
+    margin: 0px;
+    animation: spinloader 3s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    opacity: 0.8;
+}
+
+/* element parent */
+.loader{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding: 0px;
+    margin: 20px;
+}
+/* border */
+.loader-quart{
+    border-radius: 50px;
+    border: 10px solid  rgba(#ff79da, $alpha: 0.8);
+    animation: spin 3s linear;
+}
+/* pseudoelement */
+.loader-quart::after{
+    content: ".";
+    color: darken($color:#ff79da , $amount: 30);
+    font-size: 50px;
+    position : absolute;
+    top:    10px;
+    right:  10px;
+    left:   10px;
+    bottom: 10px;
+    border-radius: 50px;
+}
+
+.spin-logo{
+    padding: 10px;
+    margin: 3px;
+}
+.spin-text{
+    font-size: 2em;
+    font-family: shrikhand;
+}
+
+/* animer le spin de rotation */
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* animer le spin loader a l'ecran */
+@keyframes spinloader {
+    100%{
+        opacity : 0;
+        z-index: -10;
+    }
+}
+
+/* --- --- --- --- --- --- --- --- ---a-n-i-m-a-t-i-o-n-----s-p-i-n-----l-o-a-d-e-r--- --- --- --- --- --- --- --- --- --- */
+

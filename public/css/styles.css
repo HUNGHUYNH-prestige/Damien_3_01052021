@@ -1,18 +1,29 @@
 /* code base origin */
+/*@import "./base/codebaseorigin";*/
+/* listes des imports : partiels */
+/* 1. UTILS */
+/* Uniquement les variables simples */
 /* 1. variables */
 /* gris base */
 /* gris plus sombre */
 /* gris plus clair */
 /* couleur bouton et coeur */
-/* --- --- --- --- --- --- --- */
-/* map pour breakpoints */
-/* media query */
-/* 2. mixins */
+/* 2. variables de couleur pour le bouton */
+/* Uniquement les @mixin */
 /* mixin pour centrer n'importe element*/
 /* mixin pour la presentation de l'entreprise OhMyFood! : container */
 /* mixin pour les titres de la presentation de l'entreprise : elements dans container */
 /* h1 titre de partie */
-/* --- --- --- | --- --- --- | --- --- --- */
+/* Uniquement les breakpoints */
+/* Gestion des breakpoins avec : 
+@mixin
+@media
+@content
+*/
+/* map pour breakpoints */
+/* media query */
+/* 2. BASE */
+/* Uniquement le BODY */
 /* body */
 body {
   border: none;
@@ -22,6 +33,8 @@ body {
   font-size: 1em;
 }
 
+/* 3. PAGES */
+/* page d'accueil presentation */
 /* header contient uniquement le logo */
 .header__logo {
   background: none;
@@ -124,6 +137,9 @@ body {
   align-items: center;
 }
 
+/* 4. COMPONENTS */
+/* Gestion des boutons */
+/* BOUTON DE LA PAGE D'ACCUEIL */
 .btn {
   cursor: pointer;
   font-size: 1.5em;
@@ -137,6 +153,50 @@ body {
   height: auto;
 }
 
+/* --- --- --- --- --- --- --- --- --- */
+/* BOUTON DE LA PAGE DE MENU */
+/* bouton commander en fin de page */
+.container-bouton-commander {
+  background: #f3f3f3;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-commander {
+  text-decoration: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/*.commander{
+    border: 1px solid yellowgreen;
+    cursor: pointer;
+    font-size: 1.5em;
+    border:none;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 0px;
+    background: radial-gradient(ellipse at bottom right, #9356dc,#ff79da);
+    color: white;
+    width: auto;
+    height: auto;
+
+}*/
+/* animation de bouton */
+.animation-bouton:hover {
+  border: none;
+  box-shadow: 5px 5px 10px #fface8;
+  background: radial-gradient(ellipse at bottom right, #ae80e5, #fface8);
+}
+
+/* 5. LAYOUT */
+/* Menu de navigation */
 /* Menu NAV : Fonctionnement */
 /* ajuster les elements selon taille d'ecran */
 .menu-container {
@@ -280,6 +340,8 @@ body {
   }
 }
 
+/* 6. PAGES */
+/* Affichage des restaurants */
 /* Restaurants */
 .restaurants-container {
   display: flex;
@@ -419,7 +481,8 @@ body {
   margin: 0px;
 }
 
-/* --- --- --- */
+/* 7. COMPONENTS */
+/* Uniquement le coeur et son keyframes */
 /* bloc container de coeurs */
 .like {
   /* ici parent pour la superposition */
@@ -498,6 +561,8 @@ body {
     transform: scale(1);
   }
 }
+/* 8. LAYOUT */
+/* Uniquement le FOOTER */
 /* FOOTER */
 /* container du footer */
 .footer-container {
@@ -565,12 +630,17 @@ body {
   color: white;
 }
 
-/* - */
-/* - */
-/* - */
-/* - */
-/* - */
-/* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---  --- */
+/* logo ohmyfood footer sans utiliser le svg */
+.logo-no-svg {
+  font-family: shrikhand;
+  font-size: 2em;
+  color: white;
+  border: none;
+  padding: 5px;
+}
+
+/* 9. PAGES */
+/* Uniquement le header de la page MENU */
 /* Pages : MENU */
 /* header avec bouton retour a la page d'accueil */
 .header-container {
@@ -616,6 +686,8 @@ body {
   background: none;
 }
 
+/* 10. PAGES */
+/* Uniquement le menu de la page et ses animations */
 /* Section : container-main => cadre */
 .container-main {
   border: none;
@@ -965,39 +1037,8 @@ body {
     transform: rotate(0deg);
   }
 }
-/* bouton commander en fin de page */
-.container-bouton-commander {
-  background: #f3f3f3;
-  width: 100%;
-  height: auto;
-  margin: 0px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.link-commander {
-  text-decoration: none;
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-/*.commander{
-    border: 1px solid yellowgreen;
-    cursor: pointer;
-    font-size: 1.5em;
-    border:none;
-    border-radius: 30px;
-    padding: 20px;
-    margin: 0px;
-    background: radial-gradient(ellipse at bottom right, #9356dc,#ff79da);
-    color: white;
-    width: auto;
-    height: auto;
-
-}*/
+/* 11. LAYOUT */
+/* Uniquement le LOADING SPINNER */
 /* --- --- --- --- --- --- --- --- ---a-n-i-m-a-t-i-o-n-----s-p-i-n-----l-o-a-d-e-r--- --- --- --- --- --- --- --- --- --- */
 /* animation spin loader */
 /* le container de spin loader */
@@ -1080,47 +1121,5 @@ body {
   }
 }
 /* --- --- --- --- --- --- --- --- ---a-n-i-m-a-t-i-o-n-----s-p-i-n-----l-o-a-d-e-r--- --- --- --- --- --- --- --- --- --- */
-/* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---  --- */
-/* - */
-/* - */
-/* - */
-/* - */
-/* - */
-/* faire les animations pour les boutons */
-/* 1. animation button de recherche : lighten color background et darken color */
-/* 2. animation pour le coeur : 
-sur mobile :active et mettre les coeurs en violet
-sur desktop :hover et mettre les coeurs en violet */
-/* 3. page d'accueil : loading spinner, duree 1 a 3 secondes, couvrir toute la page, design libre */
-/* 4. page menu : 
-apparition du menu avec un retard selon modele
-faire apparaitre une coche verte avec rotation et coulissant droite vers gauche : voir modele
-sur mobile avec :active
-sur desktop avec :hover */
-/* animation : bouton lors du survol */
-/* animation-bouton-rechercher-commander */
-.animation-bouton:hover {
-  border: none;
-  box-shadow: 5px 5px 10px #fface8;
-  background: radial-gradient(ellipse at bottom right, #ae80e5, #fface8);
-}
-
-/* 
---- --- ---
-*/
-.image-no-svg {
-  border: 10px solid pink;
-}
-
-/* logo ohmyfood footer sans utiliser le svg */
-.logo-no-svg {
-  font-family: shrikhand;
-  font-size: 2em;
-  color: white;
-  border: none;
-  padding: 5px;
-}
-
-/* listes des imports : partiels */
 
 /*# sourceMappingURL=styles.css.map */

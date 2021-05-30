@@ -1,0 +1,40 @@
+/* Uniquement les breakpoints */
+
+/* Gestion des breakpoins avec : 
+@mixin
+@media
+@content
+*/
+
+/* map pour breakpoints */
+$breakpoints : (mobile-320px:320px, mobile-425px:425px, tablette-768px:768px, desktop-1024px:1024px, large-1440px:1440px);
+/* media query */
+@mixin mobile-320px{
+    @media screen and (min-width: map-get($map: $breakpoints, $key: mobile-320px)){
+        @content;
+    }
+}
+
+@mixin mobile-425px{
+    @media screen and (min-width: map-get($map: $breakpoints, $key: mobile-425px)){
+        @content;
+    }
+}
+
+@mixin tablette-768px{
+    @media screen and (min-width: map-get($map: $breakpoints, $key: tablette-768px)){
+        @content;
+    }
+}
+
+@mixin desktop-1024px{
+    @media screen and (min-width: map-get($map: $breakpoints, $key: desktop-1024px)){
+        @content;
+    }
+}
+
+@mixin large-1440px{
+    @media screen and (min-width: map-get($map: $breakpoints, $key: large-1440px)){
+        @content;
+    }
+}

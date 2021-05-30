@@ -1,0 +1,121 @@
+/* Affichage des restaurants */
+
+
+/* Restaurants */
+.restaurants-container{
+    @include centre-element;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+    background: $color-light-grey;
+}
+
+.restaurants__titre{
+    @include h1-titre-de-partie;
+}
+
+.restaurants__link__container__figure__figcaption{ /* container figure et figcaption */
+    text-decoration:none;
+    color: black;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 20px;
+    @include centre-element;
+    flex-direction: column;
+    border: none;
+    border-radius: 20px;
+    @include desktop-1024px{
+        width: 45%;
+    }
+}
+
+.restaurants__figure{
+    @include centre-element;
+    flex-direction: column;
+    border: none;
+    background: white;
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* modifier la taille de l'image : ici */
+.restaurants__image{
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+    height: 15em;
+    object-fit: cover;
+    padding: 0px;
+    margin: 0px;
+    @include centre-element;
+}
+
+/* message : Nouveau sur les images */
+.message{
+    background: #99e2d0;
+    color: rgb(31, 117, 31);
+    width: 70px;
+    height: auto;
+    margin: 0px;
+    padding: 5px;
+    text-align: center;
+}
+
+/* position le message : Nouveau sur les images */
+.parent{
+    position : relative;
+}
+
+.child1{
+    position: relative;
+}
+
+.child2{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+}
+
+.figcaption-restaurants{ /* container pour le bloc de texte et le bloc de coeur */
+    border: none;
+    width: 99%;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nom-lieu-restaurant{ /* container pour le nom et le lieu du restaurant */
+    border: none;
+    width: 80%;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* nom du restaurant en gras */
+.nom-du-restaurant{
+    border: none;
+    width: 95%;
+    height: auto;
+    padding: 10px;
+    margin: 0px;
+    font-weight: bold;
+}
+
+/* lieu du restaurant */
+.lieu-du-restautant{
+    border: none;
+    width: 95%;
+    height: auto;
+    padding: 10px;
+    margin: 0px;
+}

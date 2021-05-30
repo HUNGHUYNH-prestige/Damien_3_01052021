@@ -1,20 +1,48 @@
 /* code base origin */
-@import "./base/codebaseorigin";
+/*@import "./base/codebaseorigin";*/
 
 
 /* listes des imports : partiels */
 
+/* 1. UTILS */
 @import "./utils/variables";
-@import "./utils/functions";
+
 @import "./utils/mixins";
-@import "./utils/extensions";
-@import "./base/base";
-@import "./base/typography";
+
+@import "./utils/breakpoints";
+
+
+/* 2. BASE */
+@import "./base/body";
+
+/* 3. PAGES */
+@import "./pages/homepage";
+
+/* 4. COMPONENTS */
 @import "./components/buttons";
-@import "./layout/container";
-@import "./layout/header";
+
+/* 5. LAYOUT */
 @import "./layout/nav";
+
+/* 6. PAGES */
+@import "./pages/restaurants";
+
+/* 7. COMPONENTS */
+@import "./components/coeur-like";
+
+/* 8. LAYOUT */
 @import "./layout/footer";
-@import "./pages/project";
-@import "./pages/about";
+
+/* 9. PAGES */
+@import "./pages/menu-page-header";
+
+/* 10. PAGES */
+@import "./pages/menu-page";
+
+/* 11. LAYOUT */
+@import "./layout/loading-spinner";
+
+
+
+
 

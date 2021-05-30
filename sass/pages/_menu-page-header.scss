@@ -1,0 +1,43 @@
+/* Uniquement le header de la page MENU */
+
+/* Pages : MENU */
+
+/* header avec bouton retour a la page d'accueil */
+.header-container{
+    border: none;
+    background: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    &__icon{
+        font-size: 2em;
+        border: none;
+        background: none;
+        padding: 10px;
+        margin: 10px;
+        @include centre-element;
+        width: 10%;
+        height: auto;
+    }
+    &__link{
+        text-decoration: none;
+        color: black;
+    }
+    &__arrow{
+        border: none;
+        background: none;
+    }
+    &__logo{
+        border: none;
+        background: none;
+        padding: 10px;
+        margin: 10px;
+        @include centre-element;
+        width: 90%;
+        height: auto;
+        &__image{
+            background: none;
+        }
+    }
+}

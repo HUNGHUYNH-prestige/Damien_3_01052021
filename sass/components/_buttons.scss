@@ -1,0 +1,61 @@
+/* Gestion des boutons */
+
+/* BOUTON DE LA PAGE D'ACCUEIL */
+.btn{
+    cursor: pointer;
+    font-size: 1.5em;
+    border:none;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 0px;
+    background: $color-btn-coeur;
+    color: white;
+    width: auto;
+    height: auto;
+}
+
+
+/* --- --- --- --- --- --- --- --- --- */
+
+
+/* BOUTON DE LA PAGE DE MENU */
+
+/* bouton commander en fin de page */
+
+.container-bouton-commander{
+    background: $color-light-grey;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include centre-element;
+}
+
+.link-commander{
+    text-decoration: none;
+    border-radius:30px;
+    cursor: pointer;
+}
+/*.commander{
+    border: 1px solid yellowgreen;
+    cursor: pointer;
+    font-size: 1.5em;
+    border:none;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 0px;
+    background: radial-gradient(ellipse at bottom right, #9356dc,#ff79da);
+    color: white;
+    width: auto;
+    height: auto;
+    
+}*/
+
+
+/* animation de bouton */
+.animation-bouton:hover{
+    border: none;
+    box-shadow : 5px 5px 10px lighten($color: #ff79da, $amount: 10);
+    background: radial-gradient(ellipse at bottom right, $color-purple-light, $color-pink-light);
+}

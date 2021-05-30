@@ -1,0 +1,39 @@
+/* Uniquement les @mixin */
+
+/* mixin pour centrer n'importe element*/
+@mixin centre-element{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+/* mixin pour la presentation de l'entreprise OhMyFood! : container */
+@mixin presentation-entreprise{
+    @include centre-element;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 0px;
+    background: $color-light-grey;
+}
+
+/* mixin pour les titres de la presentation de l'entreprise : elements dans container */
+@mixin presentation-entreprise-titre{
+    @include centre-element;
+    padding: 20px 40px;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+/* h1 titre de partie */
+@mixin h1-titre-de-partie{
+    border: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 0px 20px 10px;
+    margin: 10px;
+    width: 95%;
+    height: auto;
+}

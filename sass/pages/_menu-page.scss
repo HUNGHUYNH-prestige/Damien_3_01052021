@@ -1,0 +1,297 @@
+/* Uniquement le menu de la page et ses animations */
+
+
+/* Section : container-main => cadre */
+.container-main{
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    /*
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    */
+}
+.container--image--de--fond{
+    @include centre-element;
+    width: 100%;
+    height: auto;
+    border: none;
+    margin: auto;
+    padding: 0px;
+    background:none;
+}
+
+/* image de fond */
+.image-de-fond{
+    @include centre-element;
+    width: 100%;
+    height: 20em;
+    object-fit: cover;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    z-index: -111;
+}
+
+/* menu complet => cadre menu : titre et menu */
+.menu-container-page-restaurant{
+    border: none;
+    border-radius: 30px 30px 0px 0px;
+    background: $color-light-grey;
+    padding: 0px;
+    margin-top: -30px;
+    width: 100%;
+    height: auto;
+    @include centre-element;
+    flex-direction: column;
+    z-index: 99;
+}
+
+/* titre et coeur */
+.container-titre-et-coeur{
+    background: none;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 95%;
+    height: auto;
+    padding: 15px;
+    margin: 0px;
+}
+
+/* titre-menu */
+.titre-nom{
+    font-size: 2em;
+    font-family: shrikhand;
+    border: none;
+    width: 80%;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include mobile-320px{
+        font-size: 1.4em;
+    }
+}
+
+/* foods */
+.liste-des-foods-container{
+    border-radius: 20px;
+    background : none;
+    padding: 0px;
+    margin: 0px;
+    @include centre-element;
+    flex-wrap: wrap;
+    width: 95%;
+    height: auto;
+}
+
+.sous-titre{ /* contient le sous-titre : entrees, plats, desserts */
+    border : none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    margin: 5px;
+    background: none;
+    &__element{ /* obtenir l'effet soulignement */
+        width: 30px;
+        border-bottom: 3px solid #99e2d0;
+        padding-bottom: 5px;
+        margin: 5px;
+    }
+}
+
+/* disposition des foods : entrees, plats, desserts */
+.bloc-description-des-foods{
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    padding: 0px;
+    margin: 5px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    box-shadow: 0 5px 15px 0 #c3c3c3;
+    @include desktop-1024px{
+        width: 45%;
+    }
+    
+    &:hover > .container-sans-checkbox {
+        /* conserver une taille fixe pour le texte */
+        width: 85%;
+    }
+    &:hover > .container-check{
+        @include centre-element;
+    
+    }
+}
+
+/* animation avec retard d'apparition */
+.timer{
+    @for $i from 1 through 10{
+        &-#{$i} {
+            opacity: 0;
+            animation: apparition-get-up 3s;
+            animation-delay: 0.1s * $i;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+
+
+/* animation pour l'apparition des produits foods */
+@keyframes apparition-get-up{
+    0%{
+        /*transform: translate(0px, 999px);*/
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    100%{
+        /*transform: translate(0px, 0px);*/
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+
+.container-sans-checkbox{
+    border : none;
+    width : 100%;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-overflow: ellipsis; /* pour mettre 3 points si texte trop long */
+    white-space: nowrap;
+    overflow: hidden;
+    
+}
+
+.nom-plat{ /* definition identique : creer @mixin structure-nom-de-plat */
+
+    border: none;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 1.1em;
+    &__element{
+        border: none;
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        height: auto;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
+.bloc-avec-prix{ /* definition identique : creer @mixin structure-nom-de-plat  */
+
+    border: none;
+    padding : 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+   
+    &__ingredients-plat{
+        border: none;
+        padding: 0px;
+        margin: 0px;
+        width: 80%;
+        height: auto;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-weight: lighter;
+    }
+    &__prix-plat{
+        border: none;
+        padding: 0px;
+        margin: 0px;
+        width: 10%;
+        height: auto;
+        @include centre-element;
+    }
+}
+
+/* checkbox */
+
+.container-check{
+    border : none;
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.1em;
+    
+
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background : #99e2d0;
+
+    display: none;
+    /*@include centre-element;*/
+    
+    animation : apparition 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes apparition{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 15%;
+    }
+}
+
+.checked{
+    border : none;
+    @include centre-element;
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.5em;
+    
+    color:white;
+    animation: rotation-checkbox 0.5s;
+}
+
+@keyframes rotation-checkbox{
+    0%{
+        transform : rotate(90deg);
+    }
+    50%{
+        transform: rotate(300deg);
+    }  
+    100%{
+        transform: rotate(0deg);
+    }
+}

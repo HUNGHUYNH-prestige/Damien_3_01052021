@@ -1,0 +1,18 @@
+/* Uniquement les variables simples */
+
+/* 1. variables */
+
+/* gris base */
+$color-grey: lighten(grey,35);
+/* gris plus sombre */
+$color-dark-grey: lighten(grey,40);
+/* gris plus clair */
+$color-light-grey: lighten(grey,45);
+/* couleur bouton et coeur */
+$color-btn-coeur : radial-gradient(ellipse at bottom right, #9356dc,#ff79da);
+
+
+/* 2. variables de couleur pour le bouton */
+$color-purple-light : lighten(#9356dc, 10);
+$color-pink-light : lighten(#ff79da, 10);
+

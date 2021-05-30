@@ -1,0 +1,84 @@
+/* Uniquement le FOOTER */
+
+/* FOOTER */
+
+/* container du footer */
+.footer-container{
+    background: rgb(58, 58, 58);
+    padding: 10px 0px 10px 10px;
+    margin: 0px;
+    display: flex;
+    justify-content: flex-start;
+    color: white; 
+    flex-direction: column;  
+}
+
+.svg-container{
+    font-size: 1em;
+    padding: 0px;
+    margin: 0px;
+    width: 25%;
+    height: auto;
+    background: none;
+}
+
+.liste-container{
+    background: none;
+    text-decoration: none;
+    list-style: none;
+    width: 80%;
+    height: auto;
+    padding: 10px;
+    margin: 0px;
+}
+
+.liste-element{
+    background: none;
+    padding: 10px 0px 10px 0px;
+    margin-left: 10px;
+    width: 100%;
+    height: auto;
+    border: none;
+}
+
+.icon-utensils{
+    
+    border: none;
+    margin-right: 10px;
+}
+
+.icon-handshake{
+    
+    border: none;
+    margin-right: 10px;
+}
+
+.rotate-handshake{
+    transform: rotate(-45deg);
+    width: 20px;
+    height: 20px;
+    padding: 0px;
+    margin-right: 3px; /* ajuster ici */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-link{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+/* logo ohmyfood footer sans utiliser le svg */
+
+.logo-no-svg{
+    font-family: shrikhand;
+    font-size: 2em;
+    color: white;
+    border:none;
+    padding: 5px;
+}
