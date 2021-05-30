@@ -984,7 +984,7 @@ body {
   border: none;
   padding: 0px;
   margin: 0px;
-  width: 10%;
+  width: auto;
   height: auto;
   display: flex;
   justify-content: center;
